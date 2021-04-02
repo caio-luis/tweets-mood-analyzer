@@ -10,4 +10,6 @@ java {
 
 dependencies {
     implementation CoreDependencies.kotlinStdLib
+    implementation Dependencies.coroutines
+    implementation Dependencies.koin
 }
