@@ -19,8 +19,14 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            debuggable = true
+            buildConfigField "String", "BEARER_TOKEN", TWITTER_BEARER_TOKEN
         }
     }
     compileOptions {
@@ -33,11 +39,13 @@ android {
 }
 
 dependencies {
+    implementation project(":domain")
+
     implementation CoreDependencies.kotlinStdLib
     implementation CoreDependencies.ktxCore
 
     implementation Dependencies.retrofit
     implementation Dependencies.retrofitGsonConverter
-
-    implementation Dependencies.coroutines
+    implementation Dependencies.okhttpLogger
+    implementation Dependencies.koin
 }

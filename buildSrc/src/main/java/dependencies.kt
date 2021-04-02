@@ -28,13 +28,15 @@ object Dependencies {
 
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    val okhttpLogger =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.okHttpLoggingInterceptor}"
 
     const val gson = "com.google.code.gson:gson:${Versions.gson}"
 
     const val koin = "org.koin:koin-core:${Versions.koin}"
     const val koinAndroid = "org.koin:koin-android:${Versions.koin}"
     const val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
-    const val materialDesign = "com.google.android.material:material:${Versions.koin}"
+    const val materialDesign = "com.google.android.material:material:${Versions.materialDesign}"
 
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
 

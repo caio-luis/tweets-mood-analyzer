@@ -8,15 +8,15 @@ import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.launch
 
-abstract class BaseViewModel<T>(
-    private val receiveChannel: ReceiveChannel<Response<T>>
+abstract class BaseViewModel<ResponseData>(
+    private val receiveChannel: ReceiveChannel<Response<ResponseData>>
 ) : ViewModel() {
 
     init {
         viewModelScope.launch { receiveChannel.consumeEach { handle(it) } }
     }
 
-    abstract fun handle(response: Response<T>)
+    abstract fun handle(response: Response<ResponseData>)
 
     override fun onCleared() {
         receiveChannel.cancel()

@@ -18,11 +18,13 @@ internal object DesignVersions {
 
 internal object Versions {
     const val retrofit = "2.9.0"
+    const val okHttpLoggingInterceptor = "4.2.0"
     const val gson = "2.8.6"
-    const val koin = "3.0.0-alpha-1"
+    const val koin = "2.0.1"
     const val coroutines = "1.4.3"
-    const val lifecycle = "2.3.1"
+    const val lifecycle = "2.2.0"
     const val recyclerView = "1.1.0"
+    const val materialDesign = "1.3.0"
     const val cardView = "1.0.0"
     const val swipeRefreshLayout = "1.0.0"
 }

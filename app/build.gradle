@@ -44,6 +44,7 @@ dependencies {
     implementation CoreDependencies.appCompat
     implementation Dependencies.constraintLayout
     implementation Dependencies.recyclerView
+    implementation Dependencies.materialDesign
 
     implementation Dependencies.coroutines
 
@@ -51,4 +52,8 @@ dependencies {
     implementation Dependencies.lifeCycleKtx
     implementation Dependencies.lifeCycleViewModel
     kapt Dependencies.lifeCycleKapt
+
+    implementation Dependencies.koin
+    implementation Dependencies.koinAndroid
+    implementation Dependencies.koinViewModel
 }

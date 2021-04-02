@@ -23,9 +23,9 @@ abstract class BaseUseCase<in Parameters : Any, ResponseData> : CoroutineScope {
     override val coroutineContext: CoroutineContext
         get() = parentJob + mainDispatcher
 
-    protected abstract suspend fun run(parameters: Parameters?)
+    protected abstract suspend fun run(parameters: Parameters)
 
-    operator fun invoke(params: Parameters? = null) {
+    operator fun invoke(params: Parameters) {
         launch(backgroundDispatcher) {
             run(params)
         }
