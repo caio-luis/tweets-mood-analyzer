@@ -11,5 +11,5 @@ import org.koin.dsl.module
 
 val viewModelModule = module {
     viewModel { TweetsDataViewModel(getTweetsDataUseCase = get()) }
-    viewModel { TextSentimentViewModel(textToSentimentAnalysisUseCase = get()) }
+    viewModel { TextSentimentViewModel(getTextSentimentAnalysisUseCase = get()) }
 }

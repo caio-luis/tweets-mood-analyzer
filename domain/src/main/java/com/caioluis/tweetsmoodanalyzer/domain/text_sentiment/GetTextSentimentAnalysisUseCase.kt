@@ -8,7 +8,7 @@ import com.caioluis.tweetsmoodanalyzer.domain.text_sentiment.repository.TextSent
 /**
  * Created by Caio Luis (caio-luis) on 02/04/21
  */
-class SendTextToSentimentAnalysisUseCase(
+class GetTextSentimentAnalysisUseCase(
     private val textSentimentRepository: TextSentimentRepository
 ) : BaseUseCase<String, DomainTextSentimentData>() {
     override suspend fun run(parameters: String) {

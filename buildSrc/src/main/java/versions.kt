@@ -31,10 +31,11 @@ internal object Versions {
 
 internal object TestVersions {
     const val assertJ = "3.11.1"
-    const val androidxJunit = "4.13.2"
-    const val espresso = "3.3.0"
-    const val androidTestArchCore = "1.0.0"
-    const val androidTextRules = "1.1.0"
-    const val androidTextRunner = "1.1.0"
+    const val androidxJunit = "1.1.2"
+    const val androidTestArchCore = "1.3.0"
+    const val androidTextRules = "1.3.0"
+    const val androidTextRunner = "1.3.0"
     const val coreTesting = "2.1.0"
+    const val coroutinesTest = "1.3.2"
+    const val mockk = "1.9.3"
 }

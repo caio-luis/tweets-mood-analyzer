@@ -25,6 +25,8 @@ abstract class BaseUseCase<in Parameters : Any, ResponseData> : CoroutineScope {
 
     protected abstract suspend fun run(parameters: Parameters)
 
+    fun executeBlocking(params: Parameters, scope: CoroutineScope) = scope.launch { run(params) }
+
     operator fun invoke(params: Parameters) {
         launch(backgroundDispatcher) {
             run(params)

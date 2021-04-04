@@ -12,4 +12,12 @@ dependencies {
     implementation CoreDependencies.kotlinStdLib
     implementation Dependencies.coroutines
     implementation Dependencies.koin
+
+    testImplementation TestDependencies.jUnit
+    testImplementation TestDependencies.assertJ
+    testImplementation TestDependencies.androidTestCore
+    testImplementation TestDependencies.androidTestRunner
+    testImplementation TestDependencies.androidTestRules
+    testImplementation TestDependencies.coroutinesTest
+    testImplementation TestDependencies.mockk
 }

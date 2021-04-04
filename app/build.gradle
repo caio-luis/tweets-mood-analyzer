@@ -57,4 +57,13 @@ dependencies {
     implementation Dependencies.koinAndroid
     implementation Dependencies.koinViewModel
     implementation Dependencies.retrofit
+
+    testImplementation TestDependencies.jUnit
+    testImplementation TestDependencies.assertJ
+    testImplementation TestDependencies.androidTestCore
+    testImplementation TestDependencies.androidTestRunner
+    testImplementation TestDependencies.androidTestRules
+    testImplementation TestDependencies.coreTesting
+    testImplementation TestDependencies.coroutinesTest
+    testImplementation TestDependencies.mockk
 }

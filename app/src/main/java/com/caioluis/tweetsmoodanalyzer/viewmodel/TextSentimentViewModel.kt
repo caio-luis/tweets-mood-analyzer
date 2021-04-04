@@ -2,19 +2,19 @@ package com.caioluis.tweetsmoodanalyzer.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.caioluis.tweetsmoodanalyzer.util.SentimentScoreChecker
 import com.caioluis.tweetsmoodanalyzer.base.BaseViewModel
 import com.caioluis.tweetsmoodanalyzer.domain.base.Response
-import com.caioluis.tweetsmoodanalyzer.domain.text_sentiment.SendTextToSentimentAnalysisUseCase
+import com.caioluis.tweetsmoodanalyzer.domain.text_sentiment.GetTextSentimentAnalysisUseCase
 import com.caioluis.tweetsmoodanalyzer.domain.text_sentiment.entity.DomainTextSentimentData
 import com.caioluis.tweetsmoodanalyzer.model.SentimentEmoji
+import com.caioluis.tweetsmoodanalyzer.util.SentimentScoreChecker
 
 /**
  * Created by Caio Luis (caio-luis) on 02/04/21
  */
 class TextSentimentViewModel(
-    private val textToSentimentAnalysisUseCase: SendTextToSentimentAnalysisUseCase
-) : BaseViewModel<DomainTextSentimentData>(textToSentimentAnalysisUseCase.receiveChannel) {
+    private val getTextSentimentAnalysisUseCase: GetTextSentimentAnalysisUseCase
+) : BaseViewModel<DomainTextSentimentData>(getTextSentimentAnalysisUseCase.receiveChannel) {
 
     private val textSentimentLiveData: MutableLiveData<Response<SentimentEmoji>> =
         MutableLiveData()
@@ -37,6 +37,6 @@ class TextSentimentViewModel(
     }
 
     fun sendTextToSentimentAnalysis(text: String) {
-        textToSentimentAnalysisUseCase.invoke(text)
+        getTextSentimentAnalysisUseCase.invoke(text)
     }
 }
