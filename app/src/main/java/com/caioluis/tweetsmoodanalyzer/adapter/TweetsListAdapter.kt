@@ -11,7 +11,6 @@ import com.caioluis.tweetsmoodanalyzer.R
 import com.caioluis.tweetsmoodanalyzer.model.SentimentEmoji
 import com.caioluis.tweetsmoodanalyzer.model.UiTweet
 
-
 /**
  * Created by Caio Luis (caio-luis) on 03/04/21
  */
@@ -50,12 +49,19 @@ class TweetsListAdapter :
             val emoji = itemView.findViewById<AppCompatTextView>(R.id.itemTweetSentimentEmoji)
 
             tweetText.text = item.text
-            if (item.sentimentEmoji != null)
-                emoji.text = item.sentimentEmoji?.toString()
+
+            setEmoji(item, emoji)
 
             itemView.setOnClickListener {
                 itemClickListener.invoke(item)
             }
+        }
+
+        private fun setEmoji(item: UiTweet, emoji: AppCompatTextView) {
+            if (item.sentimentEmoji != null)
+                emoji.text = item.sentimentEmoji?.toString()
+            else
+                emoji.text = ""
         }
     }
 

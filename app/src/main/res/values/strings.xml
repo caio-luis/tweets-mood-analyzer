@@ -3,6 +3,11 @@
 
     <string name="hint_user_name">Nome do usuário</string>
     <string name="tweet_sample_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…</string>
-    <string name="internet_error">Ocorreu um erro. Verifique sua conexão de internet.</string>
+
+    <!-- Error -->
+    <string name="error_connection">Ocorreu um erro. Verifique sua conexão de internet.</string>
+    <string name="error_twitter_request_not_authorized">A requisição não foi autorizada, verifique o seu token do twitter.</string>
+    <string name="error_google_request_not_authorized">A requisição não foi autorizada, verifique o seu token da google.</string>
+    <string name="error_user_not_found">O nome de usuário inserido não foi encontrado.</string>
     <string name="generic_error">Ocorreu um erro ao tentar carregar as informações, tente novamente.</string>
 </resources>

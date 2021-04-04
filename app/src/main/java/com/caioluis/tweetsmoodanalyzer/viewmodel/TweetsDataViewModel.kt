@@ -6,6 +6,7 @@ import com.caioluis.tweetsmoodanalyzer.base.BaseViewModel
 import com.caioluis.tweetsmoodanalyzer.domain.base.Response
 import com.caioluis.tweetsmoodanalyzer.domain.tweets.entity.DomainTweetsList
 import com.caioluis.tweetsmoodanalyzer.domain.tweets.usecase.GetTweetsDataUseCase
+import com.caioluis.tweetsmoodanalyzer.exception.UserNotFoundException
 import com.caioluis.tweetsmoodanalyzer.model.UiTweet
 import com.caioluis.tweetsmoodanalyzer.model.toUi
 
@@ -22,12 +23,16 @@ class TweetsDataViewModel(
     override fun handle(response: Response<DomainTweetsList>) {
 
         response.handleResponse(
-            onLoading = {
-                tweetsLiveData.postValue(Response.Loading)
-            },
+            onLoading = { tweetsLiveData.postValue(Response.Loading) },
             onSuccess = {
-                val uiTweets = it.tweets.map { tweets -> tweets.toUi() }
-                tweetsLiveData.postValue(Response.Success(uiTweets))
+                if (it.tweets.isNullOrEmpty())
+                    tweetsLiveData.postValue(
+                        Response.Failure(UserNotFoundException())
+                    )
+                else {
+                    val uiTweets = it.tweets.map { tweets -> tweets.toUi() }
+                    tweetsLiveData.postValue(Response.Success(uiTweets))
+                }
             },
             onFailure = {
                 tweetsLiveData.postValue(Response.Failure(it))

@@ -56,4 +56,5 @@ dependencies {
     implementation Dependencies.koin
     implementation Dependencies.koinAndroid
     implementation Dependencies.koinViewModel
+    implementation Dependencies.retrofit
 }

@@ -17,8 +17,8 @@ sealed class SentimentEmoji {
     }
 
     companion object {
-        private const val PENSIVE_EMOJI_UNICODE = "\uD83D\uDE04"
+        private const val PENSIVE_EMOJI_UNICODE = "\uD83D\uDE14"
         private const val NEUTRAL_FACE_EMOJI_UNICODE = "\uD83D\uDE10"
-        private const val SMILE_EMOJI_UNICODE = "\uD83D\uDE14"
+        private const val SMILE_EMOJI_UNICODE = "\uD83D\uDE04"
     }
 }

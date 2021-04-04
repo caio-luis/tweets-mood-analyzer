@@ -9,11 +9,11 @@ import com.google.gson.annotations.SerializedName
  */
 data class RemoteTweetsList(
     @SerializedName("data")
-    val tweets: List<RemoteTweet>,
+    val tweets: List<RemoteTweet>? = listOf(),
     val meta: DomainMeta
 )
 
 fun RemoteTweetsList.toDomain() = DomainTweetsList(
-    tweets = tweets.map { it.toDomain() },
+    tweets = tweets?.map { it.toDomain() } ?: listOf(),
     meta = meta
 )
