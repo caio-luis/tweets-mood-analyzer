@@ -2,7 +2,7 @@ package com.caioluis.tweetsmoodanalyzer.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.caioluis.tweetsmoodanalyzer.SentimentScoreChecker
+import com.caioluis.tweetsmoodanalyzer.util.SentimentScoreChecker
 import com.caioluis.tweetsmoodanalyzer.base.BaseViewModel
 import com.caioluis.tweetsmoodanalyzer.domain.base.Response
 import com.caioluis.tweetsmoodanalyzer.domain.text_sentiment.SendTextToSentimentAnalysisUseCase

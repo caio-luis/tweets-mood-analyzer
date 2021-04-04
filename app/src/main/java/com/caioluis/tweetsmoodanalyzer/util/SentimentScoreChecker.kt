@@ -1,4 +1,4 @@
-package com.caioluis.tweetsmoodanalyzer
+package com.caioluis.tweetsmoodanalyzer.util
 
 import com.caioluis.tweetsmoodanalyzer.model.SentimentEmoji
 
