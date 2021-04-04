@@ -1,8 +1,7 @@
-package com.caioluis.tweetsmoodanalyzer.data.remote
+package com.caioluis.tweetsmoodanalyzer.data.remote.tweets
 
-import com.caioluis.tweetsmoodanalyzer.data.remote.entity.RemoteTweetsList
+import com.caioluis.tweetsmoodanalyzer.data.remote.tweets.entity.RemoteTweetsList
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**

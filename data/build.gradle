@@ -21,12 +21,15 @@ android {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BEARER_TOKEN", TWITTER_BEARER_TOKEN
+            buildConfigField "String", "GOOGLE_API_TOKEN", GOOGLE_API_TOKEN
         }
 
         debug {
             minifyEnabled false
             debuggable = true
             buildConfigField "String", "BEARER_TOKEN", TWITTER_BEARER_TOKEN
+            buildConfigField "String", "GOOGLE_API_TOKEN", GOOGLE_API_TOKEN
         }
     }
     compileOptions {

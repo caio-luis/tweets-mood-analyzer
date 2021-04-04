@@ -1,11 +1,7 @@
 package com.caioluis.tweetsmoodanalyzer.data.base
 
 import com.caioluis.tweetsmoodanalyzer.data.BuildConfig
-import okhttp3.Headers
-import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
-import okhttp3.internal.addHeaderLenient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -28,13 +24,18 @@ interface ServiceBuilder {
 
         fun buildInterceptors(authToken: String?): OkHttpClient = OkHttpClient.Builder().apply {
             val authInterceptor = AuthenticationInterceptor(authToken)
+            val queryParamAuthInterceptor = QueryAuthenticationInterceptor()
 
             callTimeout(60, TimeUnit.SECONDS)
             connectTimeout(60, TimeUnit.SECONDS)
             readTimeout(60, TimeUnit.SECONDS)
             writeTimeout(60, TimeUnit.SECONDS)
             addInterceptor(getLoggerInterceptor())
-            if (!interceptors().contains(authInterceptor)) addInterceptor(authInterceptor)
+            if (authToken.isNullOrBlank()) {
+                addInterceptor(queryParamAuthInterceptor)
+            }
+            if (!interceptors().contains(authInterceptor))
+                addInterceptor(authInterceptor)
         }.build()
 
         private fun getLoggerInterceptor(): HttpLoggingInterceptor {

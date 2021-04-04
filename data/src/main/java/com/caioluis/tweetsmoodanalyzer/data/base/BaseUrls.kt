@@ -5,4 +5,5 @@ package com.caioluis.tweetsmoodanalyzer.data.base
  */
 object BaseUrls {
     const val TWITTER_BASE_URL = "https://api.twitter.com/"
+    const val GOOGLE_BASE_URL = "https://language.googleapis.com/"
 }

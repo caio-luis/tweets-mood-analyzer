@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">TweetsMoodAnalyzer</string>
+    <string name="app_name">Tweets Mood Analyzer</string>
+
+    <string name="hint_user_name">Nome do usuário</string>
+    <string name="tweet_sample_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam…</string>
+    <string name="internet_error">Ocorreu um erro. Verifique sua conexão de internet.</string>
+    <string name="generic_error">Ocorreu um erro ao tentar carregar as informações, tente novamente.</string>
 </resources>

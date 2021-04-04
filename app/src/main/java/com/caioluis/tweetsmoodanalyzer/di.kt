@@ -1,5 +1,6 @@
 package com.caioluis.tweetsmoodanalyzer
 
+import com.caioluis.tweetsmoodanalyzer.viewmodel.TextSentimentViewModel
 import com.caioluis.tweetsmoodanalyzer.viewmodel.TweetsDataViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -10,4 +11,5 @@ import org.koin.dsl.module
 
 val viewModelModule = module {
     viewModel { TweetsDataViewModel(getTweetsDataUseCase = get()) }
+    viewModel { TextSentimentViewModel(textToSentimentAnalysisUseCase = get()) }
 }

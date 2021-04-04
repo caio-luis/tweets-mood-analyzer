@@ -1,9 +1,9 @@
-package com.caioluis.tweetsmoodanalyzer.domain
+package com.caioluis.tweetsmoodanalyzer.domain.tweets.usecase
 
 import com.caioluis.tweetsmoodanalyzer.domain.base.BaseUseCase
 import com.caioluis.tweetsmoodanalyzer.domain.base.Response
-import com.caioluis.tweetsmoodanalyzer.domain.entity.DomainTweetsList
-import com.caioluis.tweetsmoodanalyzer.domain.repository.TweetsDataRepository
+import com.caioluis.tweetsmoodanalyzer.domain.tweets.entity.DomainTweetsList
+import com.caioluis.tweetsmoodanalyzer.domain.tweets.repository.TweetsDataRepository
 
 /**
  * Created by Caio Luis (caio-luis) on 02/04/21

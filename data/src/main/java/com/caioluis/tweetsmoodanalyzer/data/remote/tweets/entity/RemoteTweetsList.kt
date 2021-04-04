@@ -1,7 +1,7 @@
-package com.caioluis.tweetsmoodanalyzer.data.remote.entity
+package com.caioluis.tweetsmoodanalyzer.data.remote.tweets.entity
 
-import com.caioluis.tweetsmoodanalyzer.domain.entity.DomainMeta
-import com.caioluis.tweetsmoodanalyzer.domain.entity.DomainTweetsList
+import com.caioluis.tweetsmoodanalyzer.domain.tweets.entity.DomainMeta
+import com.caioluis.tweetsmoodanalyzer.domain.tweets.entity.DomainTweetsList
 import com.google.gson.annotations.SerializedName
 
 /**
